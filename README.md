@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was created using [Create React App](https://github.com/facebook/create-react-app) and json server.
+You can find it live here https://react-tasttracker.netlify.app/ with some dummy data and add new tasks to it.
 
 ## Available Scripts
 
