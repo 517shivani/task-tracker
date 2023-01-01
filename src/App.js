@@ -19,19 +19,19 @@ const App=()=> {
   },[])
   //fetch tasks
   const fetchTasks = async ()=>{
-    const res = await fetch('http://localhost:5000/tasks')
+    const res = await fetch('https://my-json-server.typicode.com/517shivani/json-server/tasks')
     const data = await res.json()
       return data
   }
    //fetch tasks
    const fetchTask = async (id)=>{
-    const res = await fetch(`http://localhost:5000/tasks/${id}`)
+    const res = await fetch(`https://my-json-server.typicode.com/517shivani/json-server/tasks${id}`)
     const data = await res.json()
       return data
   }
 //Delete Task
 const deleteTask = async(id)=>{
-  await fetch(`http://localhost:5000/tasks/${id}`,
+  await fetch(`https://my-json-server.typicode.com/517shivani/json-server/tasks/${id}`,
   {
     method : 'DELETE',
   })
@@ -43,7 +43,7 @@ const toggleReminder = async(id) =>{
   const updatedTask = {...taskToToggle,
   reminder: !taskToToggle.reminder}
 
-  const res = await fetch(`http://localhost:5000/tasks/${id}`,{
+  const res = await fetch(`https://my-json-server.typicode.com/517shivani/json-server/tasks/${id}`,{
     method:'PUT',
     headers : {
       'Content-type':'application/json'
@@ -55,7 +55,7 @@ const toggleReminder = async(id) =>{
 }
 //add task
 const addTask= async(task)=>{
-  const res = await fetch('http://localhost:5000/tasks',{
+  const res = await fetch('https://my-json-server.typicode.com/517shivani/json-server/tasks',{
     method : 'POST',
     headers : {
       'Content-type' : 'application/json'
